@@ -4,5 +4,13 @@
 .bs-example{
     	margin: 20px;
     }
-
+legend.scheduler-border {
+            font-size: 1.0em !important;
+            font-weight: bold !important;
+            text-align: left !important;
+            color: forestgreen;
+            width: auto;
+            padding: 0 10px;
+            border-bottom: none;
+        }
 

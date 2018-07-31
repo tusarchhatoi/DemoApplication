@@ -29,7 +29,7 @@
                     <div class="row">
                         <section class="col col-8">
                             <label class="col-3" for="exampleInputFN1">Last Name <span style="color: red;">*</span></label>
-                            <label class="input col-5"">
+                            <label class="input col-5">
                                 <asp:TextBox ID="txtLastName" class="form-control" runat="server" placeholder="Last Name" MaxLength="50"></asp:TextBox>
                             </label>
                         </section>
@@ -37,7 +37,7 @@
                     <div class="row">
                         <section class="col col-8">
                             <label class="col-3" for="exampleInputFN1">Salary <span style="color: red;">*</span></label>
-                            <label class="input col-5"">
+                            <label class="input col-5">
                                 <asp:TextBox ID="txtSalary" class="form-control" runat="server" placeholder="Salary Amount" MaxLength="50"></asp:TextBox>
                             </label>
                         </section>
