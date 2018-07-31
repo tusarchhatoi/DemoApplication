@@ -71,21 +71,5 @@ namespace DemoApplication
             //  Response.Write(txtName.Text + "</br>");
             // HideFields();
         }
-        protected void HideFields()
-        {
-            lblFirstName.Visible = false;
-            lblLastName.Visible = false;
-            lblSalary.Visible = false;
-
-            txtFirstName.Visible = false;
-            txtLastName.Visible = false;
-            txtSalary.Visible = false;
-
-            chkC.Visible = false;
-            chkASP.Visible = false;
-            rdMale.Visible = false;
-            rdFemale.Visible = false;
-            btnSubmit.Visible = false;
-        }
     }
 }
