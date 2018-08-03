@@ -14,3 +14,15 @@ legend.scheduler-border {
             border-bottom: none;
         }
 
+.FormatRadioButtonList label {
+            margin-right: 25px;
+            display: inline;
+            font-weight: normal;
+        }
+.datepicker {
+            z-index: 1151 !important;
+        }
+img {
+  border-radius: 50%;
+}
+

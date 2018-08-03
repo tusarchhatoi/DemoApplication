@@ -94,32 +94,61 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-grid.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-grid.min.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-reboot.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-reboot.min.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap.min.css" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.bundle.js" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.bundle.min.js" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.js" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.min.js" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\jQuery v3.3.1.js" />
+    <Content Include="assets\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="assets\plugins\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-editable.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-table.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap-editable.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap-table-editable.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap-table.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\bootstrap\js\jquery-1.10.2.min.js" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\styles\Style.css" />
+    <Content Include="EmployeeInfo.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-grid.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-grid.min.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-reboot.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap-reboot.min.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\css\bootstrap.min.css.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.bundle.js.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.bundle.min.js.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.js.map" />
-    <Content Include="assets\plugins\bootstrap-4.0.0\js\bootstrap.min.js.map" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\plugins\font-awesome\less\core.less" />
+    <Content Include="assets\plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\plugins\font-awesome\less\icons.less" />
+    <Content Include="assets\plugins\font-awesome\less\larger.less" />
+    <Content Include="assets\plugins\font-awesome\less\list.less" />
+    <Content Include="assets\plugins\font-awesome\less\mixins.less" />
+    <Content Include="assets\plugins\font-awesome\less\path.less" />
+    <Content Include="assets\plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\plugins\font-awesome\less\spinning.less" />
+    <Content Include="assets\plugins\font-awesome\less\stacked.less" />
+    <Content Include="assets\plugins\font-awesome\less\variables.less" />
+    <Content Include="assets\plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_core.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_list.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_path.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_spinning.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\plugins\font-awesome\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +178,10 @@
     </Compile>
     <Compile Include="Demo.aspx.designer.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeInfo.aspx.cs">
+      <DependentUpon>EmployeeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
