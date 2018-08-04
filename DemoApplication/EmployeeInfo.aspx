@@ -17,6 +17,7 @@
     <script src="assets/plugins/bootstrap/js/jquery-1.10.2.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="assets/plugins/back2top/back-to-top.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $(".datepicker").datepicker({
@@ -34,7 +35,7 @@
             });
         });
 
-         
+
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -48,9 +49,9 @@
         }
 
         function bindFname(input) {
-            
+
             var fname = $("#<%=TxtFirstName.ClientID%>").val();
-             $("#<%=LblFName.ClientID%>").html(fname);
+            $("#<%=LblFName.ClientID%>").html(fname);
         }
 
     </script>
@@ -79,16 +80,17 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
                                         <asp:TextBox ID="TxtFirstName" class="form-control" runat="server" placeholder="First Name" MaxLength="50"></asp:TextBox>
+                                    <%--</div>--%>
+                                    
+                               <%-- </div>
+                                <div class="form-group">--%>
+                                    <%--<div class="input-group">--%>
+                                        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                        <asp:TextBox ID="TxtLastName" class="form-control required" runat="server" placeholder="Last Name" MaxLength="50"></asp:TextBox>
                                     </div>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="#ee9393"
                                         ErrorMessage="Enter First Name" ControlToValidate="TxtFirstName" ValidationGroup="demo" Display="Dynamic">
                                     </asp:RequiredFieldValidator>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                        <asp:TextBox ID="TxtLastName" class="form-control required" runat="server" placeholder="Last Name" MaxLength="50"></asp:TextBox>
-                                    </div>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ForeColor="#ee9393"
                                         ErrorMessage="Enter Last Name" ControlToValidate="TxtLastName" ValidationGroup="demo" Display="Dynamic">
                                     </asp:RequiredFieldValidator>
@@ -97,16 +99,16 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
                                         <asp:TextBox ID="TxtEmail" class="form-control" runat="server" placeholder="Email ID" MaxLength="50"></asp:TextBox>
-                                    </div>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="#ee9393"
-                                        ErrorMessage="Enter Email" ControlToValidate="TxtEmail" ValidationGroup="demo" Display="Dynamic">
-                                    </asp:RequiredFieldValidator>
-                                </div>
+                                   <%-- </div>--%>                                  
+                                <%--</div>
                                 <div class="form-group required">
-                                    <div class="input-group">
+                                    <div class="input-group">--%>
                                         <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
                                         <asp:TextBox ID="TxtMobile" class="form-control" runat="server" placeholder="Mobile Number" MaxLength="10"></asp:TextBox>
                                     </div>
+                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="#ee9393"
+                                        ErrorMessage="Enter Email &nbsp" ControlToValidate="TxtEmail" ValidationGroup="demo" Display="Dynamic">
+                                    </asp:RequiredFieldValidator>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="#ee9393"
                                         ErrorMessage="Enter Mobile" ControlToValidate="TxtMobile" ValidationGroup="demo" Display="Dynamic">
                                     </asp:RequiredFieldValidator>
@@ -115,23 +117,24 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                                         <asp:TextBox ID="TxtDOB" class="form-control datepicker" runat="server" placeholder="DD/MM/YYYY" data-date-end-date="0d"></asp:TextBox>
-                                    </div>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ForeColor="#ee9393" Display="Dynamic"
-                                        ErrorMessage="Select DOB" ControlToValidate="TxtDOB" ValidationGroup="demo">
-                                    </asp:RequiredFieldValidator>
-                                </div>
+                                   <%-- </div>--%>
+                                    
+                                <%--</div>
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <div class="input-group">--%>
                                         <span class="input-group-addon"><i class="fa fa-graduation-cap fa-fw"></i></span>
                                         <asp:DropDownList ID="DrdQualification" class="form-control" runat="server">
-                                            <asp:ListItem Text="Select" Value="Select" Selected="True" />
+                                            <asp:ListItem Text="Highest Qualification" Value="Select" Selected="True" />
                                             <asp:ListItem Text="BE" Value="BE" />
                                             <asp:ListItem Text="BTech" Value="BTech" />
                                             <asp:ListItem Text="MCA" Value="MCA" />
                                         </asp:DropDownList>
                                     </div>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ForeColor="#ee9393" Display="Dynamic"
+                                        ErrorMessage="Select DOB" ControlToValidate="TxtDOB" ValidationGroup="demo">
+                                    </asp:RequiredFieldValidator>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="DrdQualification" Display="Dynamic"
-                                        ErrorMessage="Select Qualification" ForeColor="#ee9393" InitialValue="Select" ValidationGroup="demo"></asp:RequiredFieldValidator>
+                                        ErrorMessage="Select One Qualification" ForeColor="#ee9393" InitialValue="Select" ValidationGroup="demo"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-4">
@@ -173,74 +176,70 @@
                         <div class="panel-heading" style="text-align: center;">Preview Form</div>
                         <div class="panel-body">
                             <fieldset>
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Profile Photo"></asp:Label></td>
-                                            <td>
-                                                <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="First Name"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblFName" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Last Name"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblLName" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Email"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblEmail" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Mobile"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="Label1" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Date Of Birth"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblDOB" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Age"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblAge" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Gender"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="LblGender" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <asp:Label runat="server" Text="Languages"></asp:Label></td>
-                                            <td>
-                                                <asp:Label ID="Label2" runat="server"></asp:Label>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                                <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="center-block"/>
+                                <div class="table-responsive">
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        <asp:Label runat="server" class="text-success" Text="First Name"></asp:Label></strong></td>
+                                                <td>
+                                                    <asp:Label ID="LblFName" class="text-primary" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Last Name"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="LblLName" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Email"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="LblEmail" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Mobile"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Date Of Birth"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="LblDOB" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Age"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="LblAge" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Gender"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="LblGender" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <asp:Label runat="server" Text="Languages"></asp:Label></td>
+                                                <td>
+                                                    <asp:Label ID="Label2" runat="server"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </fieldset>
                         </div>
                     </div>
