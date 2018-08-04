@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\favicon.ico" />
     <Content Include="assets\plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
     <Content Include="assets\plugins\bootstrap-datepicker\bootstrap-datepicker.min.css" />
     <Content Include="assets\plugins\bootstrap\css\bootstrap-editable.css" />
@@ -190,7 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\img\" />
     <Folder Include="assets\scripts\" />
     <Folder Include="Models\" />
   </ItemGroup>
