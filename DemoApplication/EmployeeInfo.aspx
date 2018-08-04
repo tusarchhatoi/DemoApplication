@@ -163,8 +163,8 @@
                             </fieldset>
                         </div>
                         <div class="panel-footer" style="text-align: right;">
-                            <asp:Button ID="Button1" runat="server" Text="Save" CssClass="btn btn-primary" ValidationGroup="demo" />
-                            <asp:Button ID="Button2" runat="server" Text="Reset" CssClass="btn btn-default" />
+                            <asp:Button ID="BtnSave" runat="server" Text="Save" CssClass="btn btn-primary" ValidationGroup="demo" />
+                            <asp:Button ID="BtnReset" runat="server" Text="Reset" CssClass="btn btn-default" />
                         </div>
                     </div>
                 </div>
