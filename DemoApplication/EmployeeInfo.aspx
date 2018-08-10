@@ -60,6 +60,9 @@
     <form id="EmployeeForm" runat="server">
         <div class="container">
             <h2 style="text-align: center;">Demo Application</h2>
+            <%
+                Response.Write("Version: " + System.Environment.Version.ToString());
+            %>
             <div class="row">
                 <div class="col-md-6">
                     <div class="panel panel-primary">
@@ -80,11 +83,11 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
                                         <asp:TextBox ID="TxtFirstName" class="form-control" runat="server" placeholder="First Name" MaxLength="50"></asp:TextBox>
-                                    <%--</div>--%>
-                                    
-                               <%-- </div>
+                                        <%--</div>--%>
+
+                                        <%-- </div>
                                 <div class="form-group">--%>
-                                    <%--<div class="input-group">--%>
+                                        <%--<div class="input-group">--%>
                                         <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
                                         <asp:TextBox ID="TxtLastName" class="form-control required" runat="server" placeholder="Last Name" MaxLength="50"></asp:TextBox>
                                     </div>
@@ -99,14 +102,14 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
                                         <asp:TextBox ID="TxtEmail" class="form-control" runat="server" placeholder="Email ID" MaxLength="50"></asp:TextBox>
-                                   <%-- </div>--%>                                  
-                                <%--</div>
+                                        <%-- </div>--%>
+                                        <%--</div>
                                 <div class="form-group required">
                                     <div class="input-group">--%>
                                         <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
                                         <asp:TextBox ID="TxtMobile" class="form-control" runat="server" placeholder="Mobile Number" MaxLength="10"></asp:TextBox>
                                     </div>
-                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="#ee9393"
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="#ee9393"
                                         ErrorMessage="Enter Email &nbsp" ControlToValidate="TxtEmail" ValidationGroup="demo" Display="Dynamic">
                                     </asp:RequiredFieldValidator>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="#ee9393"
@@ -117,9 +120,9 @@
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                                         <asp:TextBox ID="TxtDOB" class="form-control datepicker" runat="server" placeholder="DD/MM/YYYY" data-date-end-date="0d"></asp:TextBox>
-                                   <%-- </div>--%>
-                                    
-                                <%--</div>
+                                        <%-- </div>--%>
+
+                                        <%--</div>
                                 <div class="form-group">
                                     <div class="input-group">--%>
                                         <span class="input-group-addon"><i class="fa fa-graduation-cap fa-fw"></i></span>
@@ -176,7 +179,7 @@
                         <div class="panel-heading" style="text-align: center;">Preview Form</div>
                         <div class="panel-body">
                             <fieldset>
-                                <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="center-block"/>
+                                <img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" class="center-block" />
                                 <div class="table-responsive">
                                     <table class="table table-condensed">
                                         <tbody>
